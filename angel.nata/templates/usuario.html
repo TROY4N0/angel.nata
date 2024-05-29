@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usuarios</title>
+    <link rel="stylesheet" href="static/css/usuario.css">
+    <style>
+       
+    </style>
+</head>
+
+<body>
+    <header>
+
+        <nav class="menu">
+            <ul class="menu__list">
+                <li><a href="/">Inicio</a></li>
+                <li><a href="/usuario"></a></li>
+                {% if 'username' in session %}
+                <li><a href="/logout">Cerrar sesión</a></li>
+                {% else %}
+                <li><a href="/logout">Iniciar sesión</a></li>
+                {% endif %}
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="user__login">
+            {% if 'username' in session %}
+            <div>
+                
+            </div>
+            {% else %}
+            <div class="user">
+             
+            </div>
+            {% endif %}
+        </div>
+
+        <div class="container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nombre</th>
+                        <th>Correo Electronico</th>
+                        <th>Editar</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for id, username, email in datos %}
+                    <tr>
+                        <td>{{ id }}</td>
+                        <td>{{ username }}</td>
+                        <td>{{ email }}</td>
+                        <th><a href="/usuario_editar/{{id}}">Editar</a></th>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </main>
+</body>
+
+</html>

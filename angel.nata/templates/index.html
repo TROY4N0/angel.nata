@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+    <link rel="stylesheet" href="static/css/style.css">
+</head>
+
+<body>
+    <header>
+        
+        <nav class="menu">
+            <ul class="menu__list">
+                <li><a href="/">Inicio</a></li>
+                <li><a href="/usuario">Ver Usuarios</a></li>
+                {%if 'username' in session%}
+                <li><a href="/logout">Cerrar sesión</a></li>
+                {%else%}
+                <li><a href="/logout">Iniciar sesión</a></li>
+                {%endif%}
+                <li><a href="/producto">Productos</a></li>
+
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="user__login">
+            {% if 'username' in session %}
+            <div>
+            </div>
+            {% else %}
+            <div class="user">
+                <a href="/login">Ingresar</a>
+                <a href="/registro">Registrarse</a>
+            </div>
+            {% endif %}
+        </div>
+        <div class="hola">
+            <h1>Bienvenido</h1>
+        </div>
+    </main>
+</body>
+
+</html>

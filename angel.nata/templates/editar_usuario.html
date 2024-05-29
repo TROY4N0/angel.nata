@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Usuario</title>
+    <link rel="stylesheet" href="/static/css/usuario.css">
+    <style>
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="menu">
+            <ul class="menu__list">
+                <li><a href="/">Inicio</a></li>
+                <li><a href="/usuario">Ver Usuarios</a></li>
+                {% if 'username' in session %}
+                <li><a href="/logout">Cerrar sesión</a></li>
+                {% else %}
+                <li><a href="/login">Iniciar sesión</a></li>
+                {% endif %}
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <h2>Editar Usuario</h2>
+            <form action="/usuario_editar/{{ usuario[0] }}" method="post">
+                <div class="form-group">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" value="{{ usuario[1] }}" required>
+                </div>
+                <div class="form-group">
+                    <label for="correo">Correo Electrónico:</label>
+                    <input type="email" id="correo" name="correo" value="{{ usuario[2] }}" required>
+                </div>
+                <div class="form-group">
+                    <label for="contrasena">Contraseña:</label>
+                    <input type="text" id="contrasena" name="contrasena" value="{{ usuario[3] }}" required>
+                </div>
+                <div class="form-group">
+                    <button type="submit">Guardar Cambios</button>
+                </div>
+            </form>
+        </div>
+    </main>
+</body>
+
+</html>

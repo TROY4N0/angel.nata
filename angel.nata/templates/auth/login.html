@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="static/css/login.css">
+</head>
+
+<body>
+    <main>
+        <div class="container">
+            <p class="volver"><a href="/">← Inicio</a></p>
+            <center><img width="100px" height="100px" src="https://theserialbinger.com/wp-content/uploads/2022/08/sung-jinwoo-Solo-Leveling-PFP-1.jpg" alt=""></center>
+            <form action="/login" method="post">
+                <label for="name">Nombre</label>
+                <input type="text" name="username" id="name" placeholder="Nombre">
+                <label for="password">Contraseña</label>
+                <input type="password" name="password" id="password" placeholder="Contraseña">
+                <input type="submit" value="Inicia sesión">
+            </form>
+            <p>¿No tienes una cuenta? <a href="/registro">Regístrate</a></p>
+        </div>
+    </main>
+</body>
+</html>

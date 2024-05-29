@@ -1,0 +1,75 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 15px 0;
+}
+
+.menu {
+    text-align: center;
+}
+
+.menu__list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu__list li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.menu__list li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 10px;
+}
+
+.menu__list li a:hover {
+    background-color: #555;
+    border-radius: 5px;
+}
+
+.user__login {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.user__login div {
+    margin-bottom: 10px;
+}
+
+.user__login span {
+    font-weight: bold;
+}
+
+.user a {
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.user a:hover {
+    background-color: #0056b3;
+}
+
+.hola {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.hola h1 {
+    color: #333;
+}
+
+        
